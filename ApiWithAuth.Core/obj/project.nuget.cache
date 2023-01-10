@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/e5DsTvJcc3CDyMknAy35Dj+CxKAOlxG/rU+N4WyBGpznIwhCHqYm5oVlNwCD2qD0d94c2dv4ZbPp7EtXzJ5UQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Decagon\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

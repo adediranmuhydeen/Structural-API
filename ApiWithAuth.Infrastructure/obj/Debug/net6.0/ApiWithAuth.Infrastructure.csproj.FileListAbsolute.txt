@@ -1,0 +1,17 @@
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.AssemblyInfo.cs
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Infrastructure.deps.json
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Infrastructure.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Infrastructure.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Core.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Core.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.csproj.CopyComplete
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\refint\ApiWithAuth.Infrastructure.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ref\ApiWithAuth.Infrastructure.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Infrastructure.runtimeconfig.json
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.genruntimeconfig.cache

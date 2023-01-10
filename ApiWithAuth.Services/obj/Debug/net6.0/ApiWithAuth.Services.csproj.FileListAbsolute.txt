@@ -1,0 +1,15 @@
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\bin\Debug\net6.0\ApiWithAuth.Services.deps.json
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\bin\Debug\net6.0\ApiWithAuth.Services.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\bin\Debug\net6.0\ApiWithAuth.Services.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.csproj.AssemblyReference.cache
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.AssemblyInfoInputs.cache
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.AssemblyInfo.cs
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.csproj.CoreCompileInputs.cache
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\refint\ApiWithAuth.Services.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ref\ApiWithAuth.Services.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\bin\Debug\net6.0\ApiWithAuth.Core.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\bin\Debug\net6.0\ApiWithAuth.Core.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Services\obj\Debug\net6.0\ApiWithAuth.Services.csproj.CopyComplete
