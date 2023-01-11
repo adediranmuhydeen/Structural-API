@@ -24,9 +24,9 @@ namespace ApiWithAuth.Infrastructure.Migrations
 
             modelBuilder.Entity("ApiWithAuth.Core.Domain.Employee", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Department")
                         .HasColumnType("int");

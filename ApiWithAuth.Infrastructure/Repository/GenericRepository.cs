@@ -22,12 +22,35 @@ namespace ApiWithAuth.Infrastructure.Repository
             return entity;
         }
 
-        public async Task<T> DeleteAsync(string Id)
+        public async Task<T> DeleteAsync(Guid Id)
         {
             var entity = await _dbSet.FindAsync(Id);
+            if (entity == null)
+            {
+                return null;
+            }
             _dbSet.Remove(entity);
             return entity;
 
+        }
+
+        public async Task<T> DeleteAsync(Expression<Func<T, bool>> exp, List<string> include = null)
+        {
+            IQueryable<T> query = _dbSet;
+            if (include != null)
+            {
+                foreach (var included in include)
+                {
+                    query = query.Include(included);
+                }
+            }
+            var entity = await _dbSet.FirstOrDefaultAsync(exp);
+            if (entity == null)
+            {
+                return null;
+            }
+            _dbSet.Remove(entity);
+            return entity;
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -58,7 +81,7 @@ namespace ApiWithAuth.Infrastructure.Repository
 
         }
 
-        public async Task<T> GetAsync(string id)
+        public async Task<T> GetAsync(Guid id)
         {
             return await _dbSet.FindAsync(id);
         }
@@ -79,8 +102,7 @@ namespace ApiWithAuth.Infrastructure.Repository
 
         public async Task<T> UpdateAsync(T entity)
         {
-            _dbSet.Attach(entity);
-            _context.Entry(entity).State = EntityState.Modified;
+            _dbSet.Update(entity);
             return entity;
         }
     }

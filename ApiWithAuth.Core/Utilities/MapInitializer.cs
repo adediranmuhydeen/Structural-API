@@ -11,6 +11,7 @@ namespace ApiWithAuth.Core.Utilities
         {
             CreateMap<AddEmployeeDto, Employee>().ReverseMap();
             CreateMap<UpdateEmployeeDto, Employee>().ReverseMap();
+            CreateMap<GetEmployeeDto, Employee>().ReverseMap();
         }
     }
 }

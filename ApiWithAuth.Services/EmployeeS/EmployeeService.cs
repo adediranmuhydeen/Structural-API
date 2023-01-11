@@ -13,21 +13,26 @@ namespace ApiWithAuth.Services.EmployeeS
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
 
-        public EmployeeService(IUnitOfWork unitOfWork)
+        public EmployeeService(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public async Task<Response<Employee>> AddEmployeeAsync(AddEmployeeDto dto)
         {
             var mappedEntity = _mapper.Map<Employee>(dto);
             var entity = await _unitOfWork.employeeRepository.CreateAsync(mappedEntity);
+            if (entity == null)
+            {
+                return Response<Employee>.Fail($"Employee {dto.FirstName}, {dto.LastName} was not added", 400);
+            }
             await _unitOfWork.SaveChnages();
             return Response<Employee>.Success($"Employess {entity.FirstName}, " +
                 $"{entity.LastName} is succssfully added", entity, true, 201);
         }
 
-        public async Task<Response<Employee>> DeletEmployeeAsync(string id)
+        public async Task<Response<Employee>> DeletEmployeeAsync(Guid id)
         {
             var employee = await _unitOfWork.employeeRepository.DeleteAsync(id);
             if (employee == null)
@@ -64,8 +69,29 @@ namespace ApiWithAuth.Services.EmployeeS
             }
             return Response<Employee>.Success("Employees is found", employee, true, 200);
         }
+        public async Task<Response<GetEmployeeDto>> GetEmployeeByEmail(string email)
+        {
+            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.Email == email);
+            if (employee == null)
+            {
+                return Response<GetEmployeeDto>.Fail($"Employee with email {email} was not found", 404);
+            }
+            var getEmployee = _mapper.Map<GetEmployeeDto>(employee);
+            return Response<GetEmployeeDto>.Success("Employees is found", getEmployee, true, 200);
+        }
 
-        public async Task<Response<Employee>> GetEmployeeByIdAsync(string id)
+        public async Task<Response<GetEmployeeDto>> GetEmployeeByPhoneNumber(string pnoneNumber)
+        {
+            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.PhoneNumber == pnoneNumber);
+            if (employee == null)
+            {
+                return Response<GetEmployeeDto>.Fail($"Employee with pnone number {pnoneNumber} was not found", 404);
+            }
+            var getEmployee = _mapper.Map<GetEmployeeDto>(employee);
+            return Response<GetEmployeeDto>.Success("Employees is found", getEmployee, true, 200);
+        }
+
+        public async Task<Response<Employee>> GetEmployeeByIdAsync(Guid id)
         {
             var employee = await _unitOfWork.employeeRepository.GetAsync(id);
             if (employee == null)
@@ -75,17 +101,32 @@ namespace ApiWithAuth.Services.EmployeeS
             return Response<Employee>.Success("Employees is found", employee, true, 200);
         }
 
-        public async Task<Response<Employee>> UpdateEmployeeAsync(UpdateEmployeeDto dto)
+
+        public async Task<Response<Employee>> UpdateEmployeeAsync(Guid id, UpdateEmployeeDto dto)
         {
-            var mappedEmployee = _mapper.Map<Employee>(dto);
-            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.Email == mappedEmployee.Email && x.FirstName == mappedEmployee.FirstName);
+            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.Id == id);
             if (employee == null)
             {
-                return Response<Employee>.Fail($"Employee with name {mappedEmployee.FirstName}, {mappedEmployee.LastName} was not found", 404);
+                return Response<Employee>.Fail($"Employee with name {dto.FirstName}, {dto.LastName} and ID {id} was not found", 404);
             }
+            var mappedEmployee = _mapper.Map<Employee>(dto);
+            var upEmployee = await _unitOfWork.employeeRepository.UpdateAsync(mappedEmployee);
             await _unitOfWork.SaveChnages();
-            return Response<Employee>.Success("Employees is found", employee, true, 200);
+            return Response<Employee>.Success("Employees is found", upEmployee, true, 200);
 
+        }
+
+        public async Task<Response<GetEmployeeDto>> DeletEmployeeAsync(string email)
+        {
+            var employee = await _unitOfWork.employeeRepository.DeleteAsync(x => x.Email == email);
+            if (employee == null)
+            {
+                return Response<GetEmployeeDto>.Fail($"Employee with email {email} was not found", 404);
+            }
+            var mappedEmployee = _mapper.Map<GetEmployeeDto>(employee);
+            await _unitOfWork.SaveChnages();
+            return Response<GetEmployeeDto>.Success($"Employess {mappedEmployee.FirstName}, " +
+                $"{employee.LastName} is succssfully Deleted", mappedEmployee, true, 200);
         }
     }
 }

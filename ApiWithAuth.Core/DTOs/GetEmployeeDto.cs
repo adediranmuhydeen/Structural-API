@@ -1,15 +1,10 @@
 ﻿using ApiWithAuth.Core.Enums;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ApiWithAuth.Core.Domain
+namespace ApiWithAuth.Core.DTOs
 {
-    public abstract class BaseEntity
+    public class GetEmployeeDto
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
-        public Guid Id { get; set; }
         public TitleE Title { get; set; }
         [Required]
         [StringLength(50)]
@@ -18,17 +13,17 @@ namespace ApiWithAuth.Core.Domain
         [Required]
         [StringLength(50)]
         public string LastName { get; set; }
+        [Required]
         [StringLength(50)]
         [EmailAddress]
         public string Email { get; set; }
-        [StringLength(20)]
-        [PasswordPropertyText]
-        public string Password { get; set; }
         [Phone]
         [Required]
         [StringLength(20)]
         public string PhoneNumber { get; set; }
-
-
+        [Required]
+        public DepartmentE Department { get; set; }
+        [Required]
+        public double Salary { get; set; }
     }
 }

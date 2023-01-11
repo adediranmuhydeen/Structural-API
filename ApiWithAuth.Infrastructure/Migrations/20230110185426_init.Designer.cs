@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiWithAuth.Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230109030917_ini")]
-    partial class ini
+    [Migration("20230110185426_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,9 +26,9 @@ namespace ApiWithAuth.Infrastructure.Migrations
 
             modelBuilder.Entity("ApiWithAuth.Core.Domain.Employee", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Department")
                         .HasColumnType("int");
