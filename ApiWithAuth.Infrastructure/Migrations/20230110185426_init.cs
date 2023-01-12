@@ -1,11 +1,10 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace ApiWithAuth.Infrastructure.Migrations
 {
-    public partial class ini : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -52,7 +51,7 @@ namespace ApiWithAuth.Infrastructure.Migrations
                 name: "Employess",
                 columns: table => new
                 {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Department = table.Column<int>(type: "int", nullable: false),
                     Salary = table.Column<double>(type: "float", nullable: false),
                     Title = table.Column<int>(type: "int", nullable: false),

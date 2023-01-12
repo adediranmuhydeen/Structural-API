@@ -2678,6 +2678,7 @@
     "net6.0": [
       "ApiWithAuth.Infrastructure >= 1.0.0",
       "ApiWithAuth.Services >= 1.0.0",
+      "AutoMapper >= 12.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.10",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -2735,6 +2736,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "AutoMapper": {
+            "target": "Package",
+            "version": "[12.0.0, )"
+          },
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[12.0.0, )"

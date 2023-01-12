@@ -7,13 +7,16 @@ namespace ApiWithAuth.Core.IService
 {
     public interface IEmployeeService
     {
-        Task<Response<Employee>> GetEmployeeByIdAsync(string id);
-        Task<Response<Employee>> GetEmployeeAsync(Expression<Func<Employee, bool>> exp, List<string> include = null);
-        Task<Response<IEnumerable<Employee>>> GetEmployeeAllAsync();
-        Task<Response<IEnumerable<Employee>>> GetEmployeeAllAsync(Expression<Func<Employee, bool>> predicate, Func<IQueryable<Employee>, IOrderedQueryable<Employee>> orderBy = null, List<string> include = null);
-        Task<Response<Employee>> UpdateEmployeeAsync(UpdateEmployeeDto dto);
-        Task<Response<Employee>> DeletEmployeeAsync(string id);
-        Task<Response<Employee>> AddEmployeeAsync(AddEmployeeDto dto);
+        Task<Response<GetEmployeeDto>> GetEmployeeByIdAsync(Guid id);
+        Task<Response<GetEmployeeDto>> GetEmployeeAsync(Expression<Func<Employee, bool>> exp, List<string> include = null);
+        Task<Response<IEnumerable<GetEmployeeDto>>> GetEmployeeAllAsync();
+        Task<Response<IEnumerable<GetEmployeeDto>>> GetEmployeeAllAsync(Expression<Func<Employee, bool>> predicate, Func<IQueryable<Employee>, IOrderedQueryable<Employee>> orderBy = null, List<string> include = null);
+        Task<Response<GetEmployeeDto>> UpdateEmployeeAsync(Guid id, UpdateEmployeeDto dto);
+        Task<Response<GetEmployeeDto>> DeletEmployeeAsync(Guid id);
+        Task<Response<GetEmployeeDto>> DeletEmployeeAsync(string email);
+        Task<Response<GetEmployeeDto>> AddEmployeeAsync(AddEmployeeDto dto);
+        Task<Response<GetEmployeeDto>> GetEmployeeByPhoneNumber(string pnoneNumber);
+        Task<Response<GetEmployeeDto>> GetEmployeeByEmail(string email);
 
 
     }

@@ -31,6 +31,6 @@ namespace ApiWithAuth.Core.DTOs
         [Required]
         public double Salary { get; set; }
         [Required]
-        public string EmploymentDate { get; } = DateTime.MinValue.Date.ToString("f");
+        public string EmploymentDate { get { return DateTime.MinValue.Date.ToString("f"); } }
     }
 }
