@@ -48,17 +48,24 @@ namespace ApiWithAuth.Services.EmployeeS
 
         public async Task<Response<LoginDto>> LoginUserAsync(LoginDto dto)
         {
-
+            //Handling null Dto
             if (dto == null)
             {
                 throw new ArgumentNullException("Entry cannot be null");
             }
+            //Checking if the Email exist
             var user = await _userManager.FindByEmailAsync(dto.Email);
             if (user == null)
             {
                 return Response<LoginDto>.Fail($"Email {dto.Email} is not registered", 401);
             }
-
+            //Checking if the password supplied matches with the email
+            var result = await _userManager.CheckPasswordAsync(user, dto.Password);
+            if (!result)
+            {
+                return Response<LoginDto>.Fail("Invalid Password", 401);
+            }
+            //Creating claims
             var claim = new[]
             {
                 new Claim("Email", dto.Email),
@@ -76,6 +83,8 @@ namespace ApiWithAuth.Services.EmployeeS
                 signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
                 );
             string tokenString = new JwtSecurityTokenHandler().WriteToken(token);
+
+
             return Response<LoginDto>.Success($"your token is {tokenString}", dto, true);
         }
     }
