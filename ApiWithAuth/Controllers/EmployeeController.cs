@@ -69,7 +69,7 @@ namespace ApiWithAuth.Controllers
             return Ok(employee);
         }
         [HttpDelete("/Delete/ByEmail")]
-        public async Task<IActionResult> DeletByEmail(string email)
+        public async Task<IActionResult> DeletByEmail([FromBody] string email)
         {
             var employee = await _employee.DeletEmployeeAsync(email);
             if (employee == null) { return BadRequest(email); }

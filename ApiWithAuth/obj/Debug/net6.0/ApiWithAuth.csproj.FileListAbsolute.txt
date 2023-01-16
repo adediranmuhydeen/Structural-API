@@ -78,3 +78,4 @@ C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.Services.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.Services.pdb
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
