@@ -110,7 +110,7 @@ namespace ApiWithAuth.Services.EmployeeS
 
         public async Task<Response<GetEmployeeDto>> UpdateEmployeeAsync(Guid id, UpdateEmployeeDto dto)
         {
-            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.Id == id);
+            var employee = await _unitOfWork.employeeRepository.GetAsync(id);
             if (employee == null)
             {
                 return Response<GetEmployeeDto>.Fail($"Employee with name {dto.FirstName}, {dto.LastName} and ID {id} was not found", 404);
