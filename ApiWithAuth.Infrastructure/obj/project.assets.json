@@ -885,7 +885,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "AutoMapper": "12.0.0"
+          "AutoMapper": "12.0.0",
+          "Microsoft.Extensions.Identity.Core": "6.0.12"
         },
         "compile": {
           "bin/placeholder/ApiWithAuth.Core.dll": {}
