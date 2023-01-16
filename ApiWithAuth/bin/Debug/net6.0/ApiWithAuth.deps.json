@@ -600,8 +600,10 @@
       "ApiWithAuth.Services/1.0.0": {
         "dependencies": {
           "ApiWithAuth.Core": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Identity.Core": "6.0.12",
-          "Microsoft.Extensions.Identity.Stores": "6.0.12"
+          "Microsoft.Extensions.Identity.Stores": "6.0.12",
+          "System.IdentityModel.Tokens.Jwt": "6.10.0"
         },
         "runtime": {
           "ApiWithAuth.Services.dll": {}
