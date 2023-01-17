@@ -17,10 +17,11 @@ namespace ApiWithAuth.Services.EmployeeS
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
 
-        public UserService(UserManager<IdentityUser> userManager, IMapper mapper)
+        public UserService(UserManager<IdentityUser> userManager, IMapper mapper, IConfiguration configuration)
         {
             _userManager = userManager;
             _mapper = mapper;
+            _configuration = configuration;
         }
 
         public async Task<Response<RegisterDto>> RegisterUserAsync(RegisterDto dto)
@@ -29,7 +30,7 @@ namespace ApiWithAuth.Services.EmployeeS
                 throw new ArgumentNullException("No information is provided");
             if (dto.Password != dto.ConfirmPassword)
             {
-                return Response<RegisterDto>.Fail("Password do no match", 400);
+                return Response<RegisterDto>.Fail("Password does no match", 400);
             }
             var registerUser = new IdentityUser
             {
@@ -51,7 +52,7 @@ namespace ApiWithAuth.Services.EmployeeS
             //Handling null Dto
             if (dto == null)
             {
-                throw new ArgumentNullException("Entry cannot be null");
+                return Response<LoginDto>.Fail("Invalid input", 404);
             }
             //Checking if the Email exist
             var user = await _userManager.FindByEmailAsync(dto.Email);
@@ -73,6 +74,10 @@ namespace ApiWithAuth.Services.EmployeeS
             };
             //Creating and encoding the Key
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AuthSettings:Key"]));
+            if (key == null)
+            {
+                return Response<LoginDto>.Fail("Unable to Generate token", 404);
+            }
 
             //Generating Token
             var token = new JwtSecurityToken(
@@ -85,7 +90,7 @@ namespace ApiWithAuth.Services.EmployeeS
             string tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
 
-            return Response<LoginDto>.Success($"your token is {tokenString}", dto, true);
+            return Response<LoginDto>.Success($"{tokenString}\" Is valid for {token.ValidTo}", dto, true);
         }
     }
 }

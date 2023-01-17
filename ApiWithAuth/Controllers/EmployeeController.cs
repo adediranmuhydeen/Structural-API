@@ -1,11 +1,13 @@
 ﻿using ApiWithAuth.Core.DTOs;
 using ApiWithAuth.Core.IService;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiWithAuth.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
+    [Authorize]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employee;

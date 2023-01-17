@@ -26,5 +26,24 @@ namespace ApiWithAuth.Controllers
             return Ok(register);
         }
 
+        [HttpPost("Login/User")]
+
+        public async Task<IActionResult> LoginUser(LoginDto login)
+        {
+            if (ModelState.IsValid)
+            {
+                var loginUser = await _userService.LoginUserAsync(login);
+                if (login != null)
+                {
+                    return Ok(loginUser);
+                }
+                return BadRequest("Invalid input");
+            }
+            return BadRequest("Unable to get token");
+        }
+
     }
+
+
+
 }

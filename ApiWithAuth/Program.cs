@@ -50,10 +50,10 @@ builder.Services.AddAuthentication(auth =>
     {
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidAudience = "http://adebayo.net",
-        ValidIssuer = "http://adebayo.net",
+        ValidAudience = builder.Configuration["AuthSettings:Audience"],
+        ValidIssuer = builder.Configuration["AuthSettings:Issuer"],
         RequireExpirationTime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("My Key")),
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AuthSettings:Key"])),
         ValidateIssuerSigningKey = true
     };
 });
