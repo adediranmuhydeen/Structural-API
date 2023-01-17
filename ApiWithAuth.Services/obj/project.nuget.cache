@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yO6h+J09CpZEJjoLJGEXAvx8BS85IiPF7R0PtXfcVAyVHe5+a0hzICvNwofbCKTDCF+iOqj7mUUkCMDhYnDuaQ==",
+  "dgSpecHash": "loIbL4MO4tuSYRJHn0v6+Ix9V1ZaxLKwz6ImtfrDRrz8OzLZelcHl2dUNDY1xH6rGBBwUKu4jD998o2dIrkeyQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,9 @@
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.10.0\\microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.identitymodel.logging\\6.10.0\\microsoft.identitymodel.logging.6.10.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\sendgrid\\9.28.1\\sendgrid.9.28.1.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\starkbank-ecdsa\\1.3.3\\starkbank-ecdsa.1.3.3.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.10.0\\system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
