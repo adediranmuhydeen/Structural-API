@@ -74,10 +74,6 @@ namespace ApiWithAuth.Services.EmployeeS
             };
             //Creating and encoding the Key
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["AuthSettings:Key"]));
-            if (key == null)
-            {
-                return Response<LoginDto>.Fail("Unable to Generate token", 404);
-            }
 
             //Generating Token
             var token = new JwtSecurityToken(

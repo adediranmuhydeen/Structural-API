@@ -28,6 +28,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddTransient<IMailService, MailService>();
 builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>

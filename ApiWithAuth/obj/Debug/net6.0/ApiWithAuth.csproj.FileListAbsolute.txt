@@ -79,3 +79,6 @@ C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\obj\Debug\net6.
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\obj\Debug\net6.0\ApiWithAuth.pdb
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\obj\Debug\net6.0\ApiWithAuth.genruntimeconfig.cache
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\obj\Debug\net6.0\ref\ApiWithAuth.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\SendGrid.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\StarkbankEcdsa.dll
