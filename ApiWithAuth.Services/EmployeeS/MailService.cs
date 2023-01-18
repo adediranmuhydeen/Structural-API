@@ -18,11 +18,9 @@ namespace ApiWithAuth.Services.EmployeeS
         {
             var apiKey = _configuration["SendGridAPIKey"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("test@example.com", "Example User");
+            var from = new EmailAddress("muhydeen.adediran@decagon.dev", "Muhydeen Adediran");
             var to = new EmailAddress(toEmail);
-            var plainTextContent = "and easy to do anywhere, even with C#";
-            var htmlContent = "<strong>and easy to do anywhere, even with C#</strong>";
-            var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
+            var msg = MailHelper.CreateSingleEmail(from, to, subject, content, content);
             var response = await client.SendEmailAsync(msg);
         }
     }
