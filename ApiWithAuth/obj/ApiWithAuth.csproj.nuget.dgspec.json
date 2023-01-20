@@ -105,6 +105,9 @@
             "projectReferences": {
               "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj": {
                 "projectPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj"
+              },
+              "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj"
               }
             }
           }

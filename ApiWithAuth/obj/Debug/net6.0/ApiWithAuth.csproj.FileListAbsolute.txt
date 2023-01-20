@@ -82,3 +82,4 @@ C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\obj\Debug\net6.
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\SendGrid.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\StarkbankEcdsa.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.xml
