@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ORo+v/MO+txWGG76Aqv7Hu7mOzMZts4BtCzWqLRBM8S8YdReYmP+iq9YScb4kJkuCACeWQA7VOnK3FSOWEK5vQ==",
+  "dgSpecHash": "AjPHfLLEZdc28dcSj/wk0Xh89reeuPyWCsDdNnusOjMHG//6lmPe8kXW/nVsNvMCPnhkotQndsHiSWzuUsIMWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Infrastructure\\ApiWithAuth.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.8.0\\microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",

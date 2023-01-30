@@ -1,16 +1,10 @@
-using ApiWithAuth.Core.IRepository;
 using ApiWithAuth.Core.Utilities;
+using ApiWithAuth.Extensions;
 using ApiWithAuth.Infrastructure;
 using ApiWithAuth.Infrastructure.Data;
-using ApiWithAuth.Infrastructure.UnitOfWork;
 using AutoMapper;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
+using IdentityServer4.AccessTokenValidation;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi.Models;
-using System.Reflection;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -23,66 +17,21 @@ builder.Services.Register();
 var automapper = new MapperConfiguration(x => x.AddProfile(new MapInitializer()));
 IMapper mapper = automapper.CreateMapper();
 
+//Extention methods
+builder.Services.ScopedInjection();
+builder.Services.SwaggerHandler();
+builder.Services.IdentitySethings();
+builder.Services.AuthSettings(configuration);
+
+builder.Services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
+                .AddIdentityServerAuthentication(x =>
+                {
+                    x.Authority = "https://localhost:7180/"; //idp address
+                    x.RequireHttpsMetadata = false;
+                    x.ApiName = "ApiWithAuth"; //api name
+                });
+
 builder.Services.AddSingleton(mapper);
-
-//Add Servicess
-builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-
-
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(options =>
-{
-    options.Password.RequiredUniqueChars = 1;
-    options.Password.RequireUppercase = true;
-    options.Password.RequireLowercase = true;
-    options.Password.RequiredLength = 5;
-    options.Password.RequireDigit = true;
-}).AddEntityFrameworkStores<ApplicationDbContext>()
-        .AddDefaultTokenProviders();
-
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo
-    {
-        Version = "v1",
-        Title = "Event Management System",
-        Description = "ASP.Net Web API for events management",
-        TermsOfService = new Uri("http://adediranmuhydeen.com"),
-        Contact = new OpenApiContact
-        {
-            Name = "Muhydeen Adediran",
-            Url = new Uri("https://www.linkedin.com/in/muhydeen-adebayo-adediran-984471117/")
-        },
-        License = new OpenApiLicense
-        {
-            Name = "License",
-            Url = new Uri("http://adediranmuhydeen.com")
-        }
-    });
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml");
-    options.IncludeXmlComments(xmlPath);
-});
-
-
-builder.Services.AddAuthentication(auth =>
-{
-    auth.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    auth.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
-    {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidAudience = configuration["AuthSettings:Audience"],
-        ValidIssuer = configuration["AuthSettings:Issuer"],
-        RequireExpirationTime = true,
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["AuthSettings:Key"])),
-        ValidateIssuerSigningKey = true
-    };
-});
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -98,9 +47,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();
-
 app.UseAuthorization();
+
+app.UseAuthentication();
 
 app.MapControllers();
 

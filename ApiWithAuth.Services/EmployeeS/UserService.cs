@@ -86,7 +86,7 @@ namespace ApiWithAuth.Services.EmployeeS
             string tokenString = new JwtSecurityTokenHandler().WriteToken(token);
 
 
-            return Response<LoginDto>.Success($"{tokenString}\" Is valid till {token.ValidTo}", dto, true);
+            return Response<LoginDto>.Success($"{tokenString} Is valid till {token.ValidTo}", true);
         }
     }
 }

@@ -35,6 +35,10 @@
         {
             return new Response<T> { Message = message, Succeded = success, StatusCode = statusCode };
         }
+        public static Response<T> Success(string message, bool success = true, int statusCode = 200)
+        {
+            return new Response<T> { Message = message, Succeded = success, StatusCode = statusCode };
+        }
 
     }
 }

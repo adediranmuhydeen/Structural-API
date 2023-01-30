@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Y3TGOdo2smxH0WhRdpHpjhPRBEtIWGQCroOf5yidLT7ZuxblqCYOkhas0zscnjIfldZf9Auy7+bWECfnNv1HCQ==",
+  "dgSpecHash": "g0eWc2aTBSBVU/zIAOcHGhszW/g7WCciKmK/YL6Z2bQrqGvgZOegs+Hr5T9qQ4lHaqfmLsmPrtZXdckWz2TjqQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Decagon\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],

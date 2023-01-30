@@ -83,3 +83,6 @@ C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\SendGrid.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\StarkbankEcdsa.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.xml
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\IdentityModel.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\IdentityModel.AspNetCore.OAuth2Introspection.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\IdentityServer4.AccessTokenValidation.dll
