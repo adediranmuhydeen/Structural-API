@@ -4,10 +4,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ApiWithAuth.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
+
         private readonly IUserService _userService;
         private readonly IMailService _mailService;
 
@@ -16,6 +18,24 @@ namespace ApiWithAuth.Controllers
             _userService = userService;
             _mailService = mailService;
         }
+
+        /// <summary>
+        /// Endpont to Add and register uset
+        /// </summary>
+        /// <remarks>
+        ///     Post/Add/Usser:
+        ///         {
+        ///         "email": "user@example.com",
+        ///         "username": "stringstri",
+        ///         "password": "string",
+        ///         "confirmPassword": "string"
+        ///         }
+        /// </remarks>
+        /// <response code="200">User created</response>
+        /// <response code="400">User creation was not successful</response>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+
 
         [HttpPost("/Add/User")]
         public async Task<IActionResult> Create(RegisterDto dto)

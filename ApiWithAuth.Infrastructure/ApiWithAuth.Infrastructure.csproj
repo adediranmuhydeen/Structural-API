@@ -23,6 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ApiWithAuth.Core\ApiWithAuth.Core.csproj" />
+    <ProjectReference Include="..\ApiWithAuth.Services\ApiWithAuth.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,3 +15,5 @@ C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.pdb
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ApiWithAuth.Infrastructure.genruntimeconfig.cache
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\obj\Debug\net6.0\ref\ApiWithAuth.Infrastructure.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Services.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth.Infrastructure\bin\Debug\net6.0\ApiWithAuth.Services.pdb

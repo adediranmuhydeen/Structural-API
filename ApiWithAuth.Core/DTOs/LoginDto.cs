@@ -10,9 +10,6 @@ namespace ApiWithAuth.Core.DTOs
         [StringLength(50)]
         public string Email { get; set; }
         [Required]
-        [StringLength(50, MinimumLength = 10)]
-        public string Username { get; set; }
-        [Required]
         [PasswordPropertyText]
         [StringLength(50, MinimumLength = 5)]
         public string Password { get; set; }
