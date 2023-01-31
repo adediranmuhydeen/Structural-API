@@ -3,7 +3,6 @@ using ApiWithAuth.Extensions;
 using ApiWithAuth.Infrastructure;
 using ApiWithAuth.Infrastructure.Data;
 using AutoMapper;
-using IdentityServer4.AccessTokenValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,15 +21,6 @@ builder.Services.ScopedInjection();
 builder.Services.SwaggerHandler();
 builder.Services.IdentitySethings();
 builder.Services.AuthSettings(configuration);
-
-builder.Services.AddAuthentication(IdentityServerAuthenticationDefaults.AuthenticationScheme)
-                .AddIdentityServerAuthentication(x =>
-                {
-                    x.Authority = "https://localhost:7180/"; //idp address
-                    x.RequireHttpsMetadata = false;
-                    x.ApiName = "ApiWithAuth"; //api name
-                });
-
 builder.Services.AddSingleton(mapper);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -47,9 +37,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
-
 app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 
