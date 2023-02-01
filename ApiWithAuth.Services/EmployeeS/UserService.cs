@@ -3,6 +3,7 @@ using ApiWithAuth.Core.IService;
 using ApiWithAuth.Core.Utilities;
 using AutoMapper;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,13 +16,15 @@ namespace ApiWithAuth.Services.EmployeeS
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly IMailService _mailService;
         private readonly IMapper _mapper;
 
-        public UserService(UserManager<IdentityUser> userManager, IMapper mapper, IConfiguration configuration)
+        public UserService(UserManager<IdentityUser> userManager, IMapper mapper, IConfiguration configuration, IMailService mailService)
         {
             _userManager = userManager;
             _mapper = mapper;
             _configuration = configuration;
+            _mailService = mailService;
         }
 
         public async Task<Response<RegisterDto>> RegisterUserAsync(RegisterDto dto)
@@ -41,10 +44,20 @@ namespace ApiWithAuth.Services.EmployeeS
             var user = await _userManager.CreateAsync(registerUser, dto.Password);
             if (!user.Succeeded)
             {
+                var confirmationToken = await _userManager.GenerateEmailConfirmationTokenAsync(registerUser);
+                var encodedEmailToken = Encoding.UTF8.GetBytes(confirmationToken);
+                var validToken = WebEncoders.Base64UrlEncode(encodedEmailToken);
+
+                string url = $"{_configuration["AppUrl"]}api/auth/confirmEmail?userId={registerUser.Id}&token={validToken}";
+
+                await _mailService.SendEmailAsync(registerUser.Email, "Confrim Your Email Address", "<h2>Welcome to Structural API</h2>" +
+                    $"<p>Please confirm your email address by <a href='{url}'>Clicking here</a></p>");
+
+
                 return Response<RegisterDto>.Fail("User was not created", 400);
             }
             // Todo send confirmation Email
-            return Response<RegisterDto>.Success($"User with email {dto.Email} is created successfully", dto, true);
+            return Response<RegisterDto>.Success($"User with email {dto.Email} is created successfully", true);
         }
 
         public async Task<Response<LoginDto>> LoginUserAsync(LoginDto dto)
@@ -87,6 +100,24 @@ namespace ApiWithAuth.Services.EmployeeS
 
 
             return Response<LoginDto>.Success($"{tokenString} Is valid till {token.ValidTo}", true);
+        }
+        public async Task<Response<LoginDto>> ConfirmEmailAsync(string email, string token)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                return Response<LoginDto>.Fail($"User with Email {email} does not exist ", 404, false);
+            }
+            var decoded = WebEncoders.Base64UrlDecode(token);
+            string normalToken = Encoding.UTF8.GetString(decoded);
+
+            var result = await _userManager.ConfirmEmailAsync(user, normalToken);
+
+            if (result.Succeeded)
+            {
+                return Response<LoginDto>.Success("Please complete your registration by confirm the email sent to you", true);
+            }
+            return Response<LoginDto>.Fail("Operation not successful", 401, false);
         }
     }
 }

@@ -12,11 +12,13 @@ namespace ApiWithAuth.Controllers
 
         private readonly IUserService _userService;
         private readonly IMailService _mailService;
+        private readonly IConfiguration _configuration;
 
-        public AuthController(IUserService userService, IMailService mailService)
+        public AuthController(IUserService userService, IMailService mailService, IConfiguration configuration)
         {
             _userService = userService;
             _mailService = mailService;
+            _configuration = configuration;
         }
 
         /// <summary>
@@ -66,6 +68,22 @@ namespace ApiWithAuth.Controllers
             }
             return BadRequest("Unable to get token");
         }
+
+        // /api/auth/confirmEmail?userId&token
+        [HttpGet("ConfirmEmail")]
+        public async Task<IActionResult> ConfrimEmail(string email, string token)
+        {
+            if (string.IsNullOrWhiteSpace(token) || string.IsNullOrWhiteSpace(token)) { return NotFound(); }
+
+            var result = await _userService.ConfirmEmailAsync(email, token);
+            if (result.Succeded)
+            {
+                return Redirect($"{_configuration["AppUrl"]}/htmlpage.html");
+            }
+
+            return BadRequest(result.Message);
+        }
+
 
     }
 

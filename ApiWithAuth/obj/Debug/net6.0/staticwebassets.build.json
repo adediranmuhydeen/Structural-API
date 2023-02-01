@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "oauXWyfgQTsrnqEBq6YAcRZ7wviuKFy4AhiOKzIhFKs=",
+  "Hash": "utx7BIVSEFTnrxstEgpWjlH7/jt/uv2yksTpzpQH5Fk=",
   "Source": "ApiWithAuth",
   "BasePath": "_content/ApiWithAuth",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "ApiWithAuth\\wwwroot",
+      "Source": "ApiWithAuth",
+      "ContentRoot": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\wwwroot\\",
+      "BasePath": "_content/ApiWithAuth",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\wwwroot\\htmlpage.html",
+      "SourceId": "ApiWithAuth",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\wwwroot\\",
+      "BasePath": "_content/ApiWithAuth",
+      "RelativePath": "htmlpage.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\htmlpage.html"
+    }
+  ]
 }
