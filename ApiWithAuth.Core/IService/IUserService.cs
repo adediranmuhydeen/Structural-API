@@ -7,5 +7,6 @@ namespace ApiWithAuth.Core.IService
     {
         Task<Response<RegisterDto>> RegisterUserAsync(RegisterDto dto);
         Task<Response<LoginDto>> LoginUserAsync(LoginDto dto);
+        Task<Response<LoginDto>> ConfirmEmailAsync(string userId, string token);
     }
 }

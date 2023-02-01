@@ -16,7 +16,7 @@ namespace ApiWithAuth.Controllers
             var exception = exceptionHandleFeature!.Error;
             if (exception is NotFoundException notFoundException)
             {
-                return Problem(notFoundException.Message, null, 404);
+                return Problem(notFoundException.Message, null);
             }
             return Problem("Ooops");
         }
