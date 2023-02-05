@@ -995,7 +995,8 @@
         "dependencies": {
           "AutoMapper": "12.0.0",
           "Microsoft.Extensions.Identity.Core": "6.0.12",
-          "Microsoft.OpenApi": "1.2.3"
+          "Microsoft.OpenApi": "1.2.3",
+          "Newtonsoft.Json": "13.0.1"
         },
         "compile": {
           "bin/placeholder/ApiWithAuth.Core.dll": {}
