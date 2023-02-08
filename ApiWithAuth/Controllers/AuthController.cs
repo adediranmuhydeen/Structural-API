@@ -54,19 +54,11 @@ namespace ApiWithAuth.Controllers
 
         public async Task<IActionResult> LoginUser(LoginDto login)
         {
+            var loginUser = await _userService.LoginUserAsync(login);
 
-            if (ModelState.IsValid)
-            {
-                var loginUser = await _userService.LoginUserAsync(login);
-                if (login != null)
-                {
-                    await _mailService.SendEmailAsync(login.Email, "Login attempt on your account!!!", "<h1>We Noticed a login attempt on your account" +
-                         "</h1><p> This is to inform you that an attempt was made to login to your account on " + DateTime.Now.ToString() + "</p>");
-                    return Ok(loginUser);
-                }
-                return BadRequest("Invalid input");
-            }
-            return BadRequest("Unable to get token");
+            //await _mailService.SendEmailAsync(login.Email, "Login attempt on your account!!!", "<h1>We Noticed a login attempt on your account" +
+            //            "</h1><p> This is to inform you that an attempt was made to login to your account on " + DateTime.Now.ToString() + "</p>");
+            return Ok(loginUser);
         }
 
         // /api/auth/confirmEmail?userId&token

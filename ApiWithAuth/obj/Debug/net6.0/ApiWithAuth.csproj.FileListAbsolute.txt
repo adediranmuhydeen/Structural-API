@@ -1,5 +1,4 @@
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\appsettings.json
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.exe
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.deps.json
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.runtimeconfig.json
@@ -88,3 +87,13 @@ C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\IdentityServer4.AccessTokenValidation.dll
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\ApiWithAuth.staticwebassets.runtime.json
 C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\appsettings.json
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\Users\Decagon\OneDrive\Documents\.Net\ApiWithAuth\ApiWithAuth\bin\Debug\net6.0\Serilog.Sinks.File.dll

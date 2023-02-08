@@ -4,6 +4,7 @@ using ApiWithAuth.Infrastructure;
 using ApiWithAuth.Infrastructure.Data;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -12,6 +13,12 @@ var configuration = builder.Configuration;
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("AppConnection")));
 builder.Services.Register();
+
+var logger = new LoggerConfiguration().MinimumLevel.Error()
+    .WriteTo.File("C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\ErroLogger.log",
+    rollingInterval: RollingInterval.Day).CreateLogger();
+
+builder.Logging.AddSerilog(logger);
 
 var automapper = new MapperConfiguration(x => x.AddProfile(new MapInitializer()));
 IMapper mapper = automapper.CreateMapper();
