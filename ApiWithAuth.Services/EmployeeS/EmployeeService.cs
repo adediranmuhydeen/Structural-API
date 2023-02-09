@@ -108,17 +108,17 @@ namespace ApiWithAuth.Services.EmployeeS
         }
 
 
-        public async Task<Response<GetEmployeeDto>> UpdateEmployeeAsync(Guid id, UpdateEmployeeDto dto)
+        public async Task<Response<Employee>> UpdateEmployeeAsync(UpdateEmployeeDto dto)
         {
-            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.Id == id);
+            var employee = await _unitOfWork.employeeRepository.GetAsync(x => x.Email == dto.Email);
             if (employee == null)
             {
-                return Response<GetEmployeeDto>.Fail($"Employee with name {dto.FirstName}, {dto.LastName} and ID {id} was not found", 404);
+                return Response<Employee>.Fail($"Employee with name {dto.FirstName}, {dto.LastName} was not found", 404);
             }
             var mappedEmployee = _mapper.Map<Employee>(dto);
             var upEmployee = await _unitOfWork.employeeRepository.UpdateAsync(mappedEmployee);
             await _unitOfWork.SaveChnages();
-            return Response<GetEmployeeDto>.Success("Employees is found", _mapper.Map<GetEmployeeDto>(upEmployee), true, 200);
+            return Response<Employee>.Success($"Employees {upEmployee.FirstName}, {upEmployee.LastName} was updated successfully", true, 200);
 
         }
 

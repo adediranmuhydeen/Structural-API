@@ -24,10 +24,10 @@ builder.Services.IdentitySethings();
 builder.Services.AuthSettings(configuration);
 builder.Services.AddSingleton(mapper);
 
-var logger = new LoggerConfiguration().ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext()
-    //.MinimumLevel.Error().WriteTo
-    //.File("C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth\\ErrorLogger.log",
-    //rollingInterval: RollingInterval.Day)
+var logger = new LoggerConfiguration()//.ReadFrom.Configuration(builder.Configuration).Enrich.FromLogContext()
+    .MinimumLevel.Error().WriteTo
+    .File("C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth\\Log\\ErrorLogger.log",
+    rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 builder.Logging.AddSerilog(logger);

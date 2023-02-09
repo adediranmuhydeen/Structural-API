@@ -22,5 +22,18 @@
             <param name="dto"></param>
             <returns></returns>
         </member>
+        <member name="M:ApiWithAuth.Controllers.EmployeeController.Update(ApiWithAuth.Core.DTOs.UpdateEmployeeDto)">
+            <summary>
+            End point to update user's information.
+            Note: the email address supplied must be the same with the existing one and it cannot be updated
+            </summary>
+            <remarks>
+            Put/Employee
+            {"title": 0,  "firstName": "string",  "middleName": "string",  "lastName": "string",  "email": "user@example.com",  "password": "string",  "phoneNumber": "string",  "department": 0,  "salary": 0
+            }
+            </remarks>
+            <param name="updateDto"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

@@ -35,13 +35,23 @@ namespace ApiWithAuth.Controllers
             return Ok(employee);
 
         }
-
+        /// <summary>
+        /// End point to update user's information.
+        /// Note: the email address supplied must be the same with the existing one and it cannot be updated
+        /// </summary>
+        /// <remarks>
+        /// Put/Employee
+        /// {"title": 0,  "firstName": "string",  "middleName": "string",  "lastName": "string",  "email": "user@example.com",  "password": "string",  "phoneNumber": "string",  "department": 0,  "salary": 0
+        /// }
+        /// </remarks>
+        /// <param name="updateDto"></param>
+        /// <returns></returns>
 
         [HttpPut("/Update/Employee")]
-        public async Task<IActionResult> Update([FromBody] UpdateEmployeeDto updateDto, Guid id)
+        public async Task<ActionResult> Update(UpdateEmployeeDto updateDto)
         {
-            var employee = _employee.UpdateEmployeeAsync(id, updateDto);
-            if (!employee.IsCompleted) return BadRequest(employee);
+            var employee = await _employee.UpdateEmployeeAsync(updateDto);
+            if (employee == null) return BadRequest(employee);
             return Ok(employee);
         }
 
