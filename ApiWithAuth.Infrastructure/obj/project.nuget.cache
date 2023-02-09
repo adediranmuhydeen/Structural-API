@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pu87EoSsFpGTELOisUmHSzqbMOw4KSAZixVXRQhVppGvVXs/POVY4lBR2MC3c3OluFa19H4yte62jzLnCtukWQ==",
+  "dgSpecHash": "M70PpBJZfFjW2732iOR6Uw5T2OYMjAFsyVcw1L9+8AcN79mb1tlg6AnHbEy70HXNt9aiIY7kiTpf/Hh1xXqB5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Infrastructure\\ApiWithAuth.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Infrastructure\\ApiWithAuth.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Decagon\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Decagon\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

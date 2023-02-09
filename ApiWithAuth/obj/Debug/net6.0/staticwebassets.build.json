@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "utx7BIVSEFTnrxstEgpWjlH7/jt/uv2yksTpzpQH5Fk=",
+  "Hash": "xcDp/w+fa8VZgnjCbPRnT26zF2sn/xB3hF9jFRztek8=",
   "Source": "ApiWithAuth",
   "BasePath": "_content/ApiWithAuth",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ApiWithAuth\\wwwroot",
       "Source": "ApiWithAuth",
-      "ContentRoot": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth\\wwwroot\\",
       "BasePath": "_content/ApiWithAuth",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\wwwroot\\htmlpage.html",
+      "Identity": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth\\wwwroot\\htmlpage.html",
       "SourceId": "ApiWithAuth",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth\\wwwroot\\",
       "BasePath": "_content/ApiWithAuth",
       "RelativePath": "htmlpage.html",
       "AssetKind": "All",

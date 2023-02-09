@@ -1,4 +1,5 @@
 ﻿using ApiWithAuth.Core.Enums;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ApiWithAuth.Core.DTOs
@@ -17,6 +18,8 @@ namespace ApiWithAuth.Core.DTOs
         [StringLength(50)]
         [EmailAddress]
         public string Email { get; set; }
+        [PasswordPropertyText]
+        public string Password { get; set; }
         [Phone]
         [Required]
         [StringLength(20)]

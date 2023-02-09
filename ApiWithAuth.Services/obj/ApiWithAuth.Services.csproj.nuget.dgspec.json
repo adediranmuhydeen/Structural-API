@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj": {}
+    "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj": {
+    "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
         "projectName": "ApiWithAuth.Core",
-        "projectPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
+        "projectPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -82,14 +82,14 @@
         }
       }
     },
-    "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj": {
+    "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj",
+        "projectUniqueName": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj",
         "projectName": "ApiWithAuth.Services",
-        "projectPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj",
+        "projectPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Services\\ApiWithAuth.Services.csproj",
         "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Services\\obj\\",
+        "outputPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -111,8 +111,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj": {
-                "projectPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj"
+              "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj": {
+                "projectPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj"
               }
             }
           }

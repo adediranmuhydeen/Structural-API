@@ -12,9 +12,11 @@ namespace ApiWithAuth.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeService _employee;
-        public EmployeeController(IEmployeeService employee)
+        private readonly ILogger<EmployeeController> _logger;
+        public EmployeeController(IEmployeeService employee, ILogger<EmployeeController> logger)
         {
             _employee = employee;
+            _logger = logger;
         }
 
 
@@ -22,7 +24,16 @@ namespace ApiWithAuth.Controllers
         public async Task<IActionResult> Create([FromBody] AddEmployeeDto addDto)
         {
             var employee = await _employee.AddEmployeeAsync(addDto);
+            try
+            {
+                return Ok(employee);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, ex);
+            }
             return Ok(employee);
+
         }
 
 

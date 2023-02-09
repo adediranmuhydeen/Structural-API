@@ -666,11 +666,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
       "projectName": "ApiWithAuth.Core",
-      "projectPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
+      "projectPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\ApiWithAuth.Core.csproj",
       "packagesPath": "C:\\Users\\Decagon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Decagon\\OneDrive\\Documents\\.Net\\ApiWithAuth\\ApiWithAuth.Core\\obj\\",
+      "outputPath": "C:\\Users\\Decagon\\OneDrive\\Desktop\\Structural-API\\ApiWithAuth.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
